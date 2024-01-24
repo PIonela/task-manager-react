@@ -9,24 +9,28 @@ export const TaskProvider = ({ children }) => {
       taskName: "task1",
       taskDescription: "desc1",
       taskDate: "12-12-2024",
+      id: "abc-111",
       status: "Todo",
     },
     {
       taskName: "task2",
       taskDescription: "desc2",
       taskDate: "12-12-2024",
+      id: "abc-112",
       status: "Pending",
     },
     {
       taskName: "task3",
       taskDescription: "desc3",
       taskDate: "12-12-2024",
+      id: "abc-113",
       status: "In Progress",
     },
     {
       taskName: "task4",
       taskDescription: "desc4",
       taskDate: "12-12-2024",
+      id: "abc-114",
       status: "Completed",
     },
   ];

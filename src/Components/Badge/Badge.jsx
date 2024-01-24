@@ -1,6 +1,8 @@
 import "./Badge.css";
+import { useTaskContext } from "../../context/TaskContext";
 
 function Badge(props) {
+  const { taskList, setTaskList } = useTaskContext();
   const badgeColor = () => {
     switch (props.status) {
       case "Todo":
@@ -15,7 +17,27 @@ function Badge(props) {
         return "grey";
     }
   };
-  return <p className={`status ${badgeColor()}`}>{props.status}</p>;
+
+  const handleSelectChange = (e) => {
+    setTaskList(
+      taskList.map((task) =>
+        task.id === props.id ? { ...task, status: e.target.value } : task
+      )
+    );
+  };
+
+  return (
+    <select
+      className={`status ${badgeColor()}`}
+      value={props.status}
+      onChange={handleSelectChange}
+    >
+      <option value="Todo">Todo</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+  );
 }
 
 export default Badge;

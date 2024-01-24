@@ -9,7 +9,7 @@ const TaskCard = (props) => {
     <div className="task-container">
       <div className="top">
         <p className="name">{props.name}</p>
-        <Badge status={props.status} />
+        <Badge status={props.status} id={props.id} />
       </div>
       <div className="content">{props.desc}</div>
       <div className="bottom">

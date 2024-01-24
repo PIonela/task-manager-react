@@ -3,6 +3,7 @@ import NoTasks from "../NoTasks/NoTasks";
 import "./ContainerBox.css";
 import ControlPanel from "../ControlPanel/ControlPanel";
 import { useTaskContext } from "../../context/TaskContext";
+import { v4 as uuidv4 } from "uuid";
 
 const ContainerBox = () => {
   const { taskList, setTaskList, selectedStatus } = useTaskContext();
@@ -12,6 +13,7 @@ const ContainerBox = () => {
       ...taskList,
       {
         ...newTask,
+        id: uuidv4(),
         status: "Todo",
       },
     ]);
@@ -56,6 +58,7 @@ const ContainerBox = () => {
                 desc={task.taskDescription}
                 date={task.taskDate}
                 key={index}
+                id={task.id}
               />
             ))}
           </div>
