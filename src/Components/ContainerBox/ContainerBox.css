@@ -1,0 +1,19 @@
+.container-box {
+  border-radius: 50px;
+  background: #f3f3fb;
+  padding: 70px 44px;
+  margin: 20px 30px;
+  height: calc(100vh - (140px + 40px)); /*am scazut marginea si paddingul*/
+}
+
+.container-box h1,
+.container-box h4 {
+  margin-left: 40px;
+}
+
+.container-box .tasks {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  width: 70%;
+}

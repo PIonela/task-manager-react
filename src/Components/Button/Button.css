@@ -1,0 +1,13 @@
+.primary-btn {
+  border-radius: 12px;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 18px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
